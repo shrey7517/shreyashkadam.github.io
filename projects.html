@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Projects | Shreyash Kadam</title>
+  <title>Projects | SK</title>
 
-  <meta name="description" content="Engineering projects by SK across hardware systems, software development, and simulation-based design.">
+  <meta name="description"
+    content="Engineering projects by SK across hardware systems, software development, and simulation-based design." />
 
-  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
@@ -16,12 +18,13 @@
   <!-- ================= NAVBAR ================= -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo"> SK </div>
+
+      <div class="logo">SK</div>
 
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
+        <a href="projects.html" class="active">Projects</a>
         <a href="why-hire-me.html">Why Hire Me</a>
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
@@ -32,70 +35,94 @@
   </nav>
 
   <!-- ================= PROJECTS SECTION ================= -->
-  <section class="hero" style="padding-top:4rem;">
+  <section class="section">
 
-    <div class="hero-text">
+    <div class="section-header">
       <h1>My <span>Projects</span></h1>
       <p>
-        Below are selected projects that reflect my work across hardware design,
-        embedded systems, software development, and simulation-based engineering.
-        Each project emphasizes practical problem-solving and system-level thinking.
+        Selected projects demonstrating my work across hardware systems,
+        embedded software, simulations, and intelligent engineering solutions.
       </p>
+    </div>
 
-      <!-- ===== HARDWARE PROJECTS ===== -->
-      <h2 style="margin-top:2.5rem;">🛠 Hardware Projects</h2>
+    <!-- ================= HARDWARE PROJECTS ================= -->
+    <h2 class="section-subtitle">🛠 Hardware Projects</h2>
 
-      <p>
-        <strong>Motion Detection System in Darkness</strong><br>
-        Designed an Arduino-based motion detection system capable of operating in
-        low-light environments using sensors and alert mechanisms. The project
-        focused on reliable detection, power efficiency, and real-time response.
-        <br><em>Technologies:</em> Arduino, Sensors, Embedded C
-      </p>
+    <div class="projects-grid">
 
-      <p>
-        <strong>Clap-Controlled Light and Fan System</strong><br>
-        Developed an automated system to control electrical appliances using sound
-        input. Implemented signal conditioning and relay-based switching to ensure
-        safe and stable operation.
-        <br><em>Technologies:</em> Arduino, Relay Module, Signal Processing
-      </p>
+      <div class="project-card">
+        <img src="images/project1.jpg" alt="Motion Detection System">
+        <h3>Motion Detection System in Darkness</h3>
+        <p>
+          Arduino-based motion detection system operating in low-light conditions
+          using sensors and alert mechanisms.
+        </p>
+        <span class="tech">Arduino · Sensors · Embedded C</span>
+      </div>
 
-      <!-- ===== SOFTWARE PROJECTS ===== -->
-      <h2 style="margin-top:2.5rem;">💻 Software Projects</h2>
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Clap Controlled System">
+        <h3>Clap-Controlled Light & Fan System</h3>
+        <p>
+          Automated control of electrical appliances using sound input with
+          signal conditioning and relay switching.
+        </p>
+        <span class="tech">Arduino · Relay Module · Signal Processing</span>
+      </div>
 
-      <p>
-        <strong>Android Application Development</strong><br>
-        Built Android applications using Kotlin with basic Firebase integration.
-        Focused on clean UI design, logical flow, and backend connectivity for data
-        handling.
-        <br><em>Technologies:</em> Kotlin, Firebase, Android Studio
-      </p>
+    </div>
 
-      <p>
-        <strong>Embedded Audio Classification (TinyML)</strong><br>
-        Implemented an embedded audio classification system on an STM32
-        microcontroller using a TinyML workflow. Emphasized model optimization and
-        resource-aware deployment.
-        <br><em>Technologies:</em> STM32, TensorFlow Lite, Embedded ML
-      </p>
+    <!-- ================= SOFTWARE PROJECTS ================= -->
+    <h2 class="section-subtitle">💻 Software Projects</h2>
 
-      <!-- ===== SIMULATION PROJECTS ===== -->
-      <h2 style="margin-top:2.5rem;">📡 Simulation Projects</h2>
+    <div class="projects-grid">
 
-      <p>
-        <strong>Satellite Communication System Simulation</strong><br>
-        Simulated satellite communication scenarios using MATLAB and Simulink,
-        focusing on signal behavior, disturbances, and system performance.
-        <br><em>Technologies:</em> MATLAB, Simulink, Communication Systems
-      </p>
+      <div class="project-card">
+        <img src="images/project3.jpg" alt="Android App Development">
+        <h3>Android Application Development</h3>
+        <p>
+          Android apps built using Kotlin with Firebase integration, focusing on
+          clean UI and structured backend connectivity.
+        </p>
+        <span class="tech">Kotlin · Firebase · Android Studio</span>
+      </div>
 
-      <p>
-        <strong>Dual-Mode Propulsion Quadcopter Simulation</strong><br>
-        Designed and simulated a quadcopter system with keypad-based control to
-        analyze stability, control response, and propulsion behavior.
-        <br><em>Technologies:</em> MATLAB, Control Systems, Simulation
-      </p>
+      <div class="project-card">
+        <img src="images/drone_project.jpg" alt="TinyML Audio Classification">
+        <h3>Embedded Audio Classification (TinyML)</h3>
+        <p>
+          TinyML-based audio classification system deployed on STM32 with
+          optimized inference and low resource usage.
+        </p>
+        <span class="tech">STM32 · TensorFlow Lite · Embedded ML</span>
+      </div>
+
+    </div>
+
+    <!-- ================= SIMULATION PROJECTS ================= -->
+    <h2 class="section-subtitle">📡 Simulation Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img src="images/drone_project.jpg" alt="Satellite Simulation">
+        <h3>Satellite Communication System Simulation</h3>
+        <p>
+          MATLAB-based simulation of satellite communication links, signal
+          behavior, atmospheric disturbance, and system performance.
+        </p>
+        <span class="tech">MATLAB · Simulink · Communication Systems</span>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project1.jpg" alt="Quadcopter Simulation">
+        <h3>Dual-Mode Propulsion Quadcopter Simulation</h3>
+        <p>
+          Simulated quadcopter system analyzing stability, control response, and
+          propulsion using control theory.
+        </p>
+        <span class="tech">MATLAB · Control Systems · Simulation</span>
+      </div>
 
     </div>
 
@@ -103,4 +130,3 @@
 
 </body>
 </html>
-
