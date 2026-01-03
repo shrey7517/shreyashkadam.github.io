@@ -1,10 +1,10 @@
-/* ===== GOOGLE FONTS ===== */
+/* ================= GOOGLE FONTS ================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&family=JetBrains+Mono&display=swap');
 
-/* ===== ROOT VARIABLES ===== */
+/* ================= ROOT VARIABLES ================= */
 :root {
-  --bg-dark: #1E1E1E;
   --bg-beige: #F5F1EA;
+  --bg-dark: #1E1E1E;
 
   --text-dark: #2B2B2B;
   --text-light: #EAEAEA;
@@ -14,11 +14,15 @@
   --bronze: #B08D57;
 }
 
-/* ===== GLOBAL RESET ===== */
+/* ================= GLOBAL RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,13 +32,13 @@ body {
   line-height: 1.6;
 }
 
-/* ===== NAVBAR ===== */
+/* ================= NAVBAR ================= */
 .navbar {
+  position: sticky;
+  top: 0;
   width: 100%;
   background-color: var(--bg-beige);
   border-bottom: 1px solid rgba(0,0,0,0.08);
-  position: sticky;
-  top: 0;
   z-index: 1000;
 }
 
@@ -54,6 +58,7 @@ body {
   color: var(--gold);
 }
 
+/* ================= NAV LINKS ================= */
 .nav-links {
   display: flex;
   gap: 1.8rem;
@@ -71,9 +76,9 @@ body {
   position: absolute;
   width: 0%;
   height: 2px;
-  background: var(--gold);
   left: 0;
   bottom: -4px;
+  background-color: var(--gold);
   transition: width 0.3s ease;
 }
 
@@ -81,14 +86,14 @@ body {
   width: 100%;
 }
 
-/* ===== GITHUB BUTTON ===== */
+/* ================= GITHUB BUTTON ================= */
 .github-btn {
   border: 1.5px solid var(--gold);
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 1.1rem;
   border-radius: 20px;
-  color: var(--gold);
   text-decoration: none;
   font-weight: 500;
+  color: var(--gold);
   transition: all 0.3s ease;
 }
 
@@ -97,7 +102,7 @@ body {
   color: var(--bg-beige);
 }
 
-/* ===== HERO SECTION ===== */
+/* ================= HERO SECTION ================= */
 .hero {
   max-width: 1200px;
   margin: auto;
@@ -108,28 +113,29 @@ body {
   gap: 3rem;
 }
 
-.hero h1 {
+.hero-text h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 
-.hero h1 span {
+.hero-text h1 span {
   color: var(--gold);
 }
 
-.hero h2 {
+.hero-text h2 {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
 }
 
-.hero p {
-  max-width: 500px;
+.hero-text p {
+  max-width: 520px;
   margin-bottom: 2rem;
+  font-size: 1rem;
 }
 
-/* ===== BUTTONS ===== */
+/* ================= BUTTONS ================= */
 .btn-group {
   display: flex;
   gap: 1rem;
@@ -138,7 +144,7 @@ body {
 .btn-primary {
   background-color: var(--gold);
   color: var(--bg-beige);
-  padding: 0.7rem 1.6rem;
+  padding: 0.7rem 1.7rem;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 500;
@@ -152,15 +158,32 @@ body {
 .btn-outline {
   border: 1.5px solid var(--text-dark);
   color: var(--text-dark);
-  padding: 0.7rem 1.6rem;
+  padding: 0.7rem 1.7rem;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 500;
 }
 
-/* ===== PROFILE IMAGE ===== */
+/* ================= HERO IMAGE ================= */
 .hero-img img {
   width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-radius: 22px;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.18);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text p {
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  .btn-group {
+    justify-content: center;
+  }
 }
