@@ -1,251 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Shreyash Kadam — Portfolio</title>
-  <meta name="description" content="Portfolio of Shreyash Kadam — Electronics & Telecommunication | Drone & Satellite Research" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Shreyash Kadam | Electronics & Telecommunication Engineer</title>
+
+  <meta name="description" content="Portfolio of Shreyash Kadam, Electronics & Telecommunication Engineer specializing in hardware systems, simulations, and intelligent engineering solutions.">
+
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
 
-  <a id="top"></a>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Shreyash Kadam</div>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="brand">SK</div>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#journey">My Journey</a></li>
-        <li><a href="#work">How I Work</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#achieve">Achievements</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="nav-toggle" aria-label="Open menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="why-hire-me.html">Why Hire Me</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <a class="github-btn" href="https://github.com/shrey7517" target="_blank">GitHub</a>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header id="hero" class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <h1>Shreyash Kadam</h1>
-        <p class="tagline">
-  A seeker of ideas and maker of meaning — I blend logic with imagination to craft purposeful, intelligent creations.<br>
-  Every project I build is a step toward designing a future where creativity and technology move in harmony.
-</p>
-        <div class="cta">
-          <a class="btn primary" href="#projects">See Projects</a>
-          <a class="btn outline" href="#contact">Contact Me</a>
-        </div>
-        <ul class="hero-meta">
-          <li><strong>Dept:</strong> ENTC</li>
-          <li><strong>College:</strong> PCCOE</li>
-          <li><strong>Email:</strong> shreyash.kadam777@gmail.com</li>
-        </ul>
-      </div>
-      <div class="hero-media">
-        <div class="avatar-large">
-          <img src="profile.jpg" alt="Shreyash Kadam">
-        </div>
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1><span>Shreyash</span> Kadam</h1>
+      <h2>Electronics & Telecommunication Engineer</h2>
+
+      <p>
+        I design intelligent systems by combining electronics, simulation,
+        and software. My work focuses on embedded systems, control engineering,
+        and practical problem-solving through technology.
+      </p>
+
+      <div class="btn-group">
+        <a href="projects.html" class="btn-primary">View Projects</a>
+        <a href="assets/resume/Shreyash_Kadam_Resume.pdf" class="btn-outline" download>
+          Download Resume
+        </a>
       </div>
     </div>
-    <div class="hero-wave"></div>
-  </header>
 
-  <main class="container">
+    <div class="hero-img">
+      <img src="assets/images/profile.jpg" alt="Shreyash Kadam">
+    </div>
 
-    <!-- My Journey -->
-    <section id="journey" class="card slide">
-      <h2>My Journey</h2>
-      <p class="lead">I’m an enthusiastic Electronics & Telecommunication engineering student with foundations in digital electronics, communication systems, and embedded programming. I enjoy bridging hardware and software — building practical IoT devices, ARDUINO prototypes, and working on satellite communication simulations. I actively participate in innovation activities like SIH and Avishkar, and I’m writing a research paper on Germanium semiconductor material.</p>
-      <div class="journey-grid">
-        <div class="journey-item">
-          <h3>From Curiosity to Prototypes</h3>
-          <p>Started with Arduino projects — motion detection, clap-controlled automation — and expanded to simulation work in MATLAB Simulink.</p>
-        </div>
-        <div class="journey-item">
-          <h3>Collaboration & Leadership</h3>
-          <p>Member of IEN cell, NSS; participant in SIH and Avishakar; hands-on team contributor and leader on campus initiatives.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- How I Work -->
-    <section id="work" class="card slide">
-      <h2>How I Work</h2>
-      <div class="process">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h4>Research & Idea</h4>
-          <p>Understand the problem and collect requirements — literature, sensors, and constraints.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h4>Design & Simulate</h4>
-          <p>Prototype circuits & simulate systems (MATLAB/Simulink, breadboard, Arduino).</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h4>Implement & Test</h4>
-          <p>Implement hardware + firmware, test under conditions, iterate until robust.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h4>Deploy & Document</h4>
-          <p>Deploy solution, prepare documentation and (if applicable) research write-up.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="card slide">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <article class="project">
-          <img src="project1.jpg" alt="Motion Detection (if image missing, upload project1.jpg)">
-          <h3>Motion Detection System in Darkness</h3>
-          <p>PIR-based motion detection system using Arduino and IR modules for low-light scenarios.</p>
-        </article>
-
-        <article class="project">
-          <img src="project2.jpg" alt="Clap control">
-          <h3>Automated Light & Fan Control via Clap</h3>
-          <p>Sound-detection logic on microcontroller to control fan speeds and lights based on clap patterns.</p>
-        </article>
-
-        <article class="project">
-          <img src="project3.jpg" alt="Satellite simulation">
-          <h3>Satellite Communication Simulation</h3>
-          <p>MATLAB Simulink simulation for antenna alignment and disturbance compensation in satcom links.</p>
-        </article>
-
-        <article class="project featured">
-          <img src="drone_project.jpg" alt="Drone for Space Exploration">
-          <h3>Developing a Drone for Space Exploration (Ongoing)</h3>
-          <p>Autonomous drone prototype integrating sensors, propulsion control and AI navigation — aimed for future exploration research.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Achievements -->
-    <section id="achieve" class="card slide">
-      <h2>Achievements & Certifications</h2>
-      <div class="ach-grid">
-        <div class="ach-item">
-          <h4>Innovation Ambassador — Government</h4>
-          <p>Selected as a campus innovation ambassador for government outreach programs.</p>
-        </div>
-        <div class="ach-item">
-          <h4>SIH & Avishakar Participant</h4>
-          <p>Represented projects at hackathons and university research festivals.</p>
-        </div>
-        <div class="ach-item">
-          <h4>Entrepreneurship Skill Test — Completed</h4>
-          <p>Completed foundation-level entrepreneurship training and tests.</p>
-        </div>
-        <div class="ach-item">
-          <h4>State Level Karate — Silver Medalist</h4>
-          <p>Competitive athlete with discipline and teamwork experience.</p>
-        </div>
-        <div class="ach-item">
-          <h4>Trekking & Guiding Experience</h4>
-          <p>Experienced trek guide and cyclist — leadership and endurance outside engineering.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="card slide">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <div class="skill-group">
-          <h4>Technical</h4>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">TensorFlow</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">Android (Kotlin)</span>
-            <span class="tag">Firebase</span>
-            <span class="tag">Arduino</span>
-            <span class="tag">IoT</span>
-            <span class="tag">MATLAB</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Soft</h4>
-          <div class="tags">
-            <span class="tag">Communication</span>
-            <span class="tag">Leadership</span>
-            <span class="tag">Calm under Pressure</span>
-            <span class="tag">Observant</span>
-            <span class="tag">Energetic</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="card slide">
-      <h2>Contact</h2>
-      <p class="lead">I’m available for internships, research projects, and collaborations. Send a message and I’ll get back to you.</p>
-      <div class="contact-grid">
-        <div>
-          <p><strong>Email</strong><br><a href="mailto:shreyash.kadam777@gmail.com">shreyash.kadam777@gmail.com</a></p>
-          <p><strong>Phone</strong><br>+91-917517028731</p>
-        </div>
-        <div>
-          <p><strong>Links</strong><br>
-            <a href="https://github.com/shreyashkadam" target="_blank">GitHub</a> ·
-            <a href="#" target="_blank">LinkedIn</a>
-          </p>
-          <p><strong>Location</strong><br>Pune, Maharashtra, India</p>
-        </div>
-      </div>
-      <div class="contact-cta">
-        <a class="btn primary" href="mailto:shreyash.kadam777@gmail.com">Email Me</a>
-        <a class="btn outline" href="Shreyash_Kadam_Resume.pdf" download>Download Resume</a>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer" class="footer">
-    <p>© <span id="year"></span> Shreyash Kadam — Electronics & Telecommunication | Built with care.</p>
-    <a id="to-top" class="to-top" href="#top" title="Back to top">↑</a>
-  </footer>
-
-  <script>
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // intersection observer for slide animations
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting) e.target.classList.add('visible');
-      });
-    },{threshold:0.18});
-    document.querySelectorAll('.slide').forEach(s=>observer.observe(s));
-
-    // nav toggle for mobile
-    const navToggle = document.getElementById('nav-toggle');
-    navToggle.addEventListener('click', ()=> {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-
-    // smooth scroll for nav links
-    document.querySelectorAll('.nav-links a, .to-top, .btn').forEach(link=>{
-      link.addEventListener('click', (e)=>{
-        const href = link.getAttribute('href');
-        if(href && href.startsWith('#')){
-          e.preventDefault();
-          document.querySelector(href).scrollIntoView({behavior:'smooth', block:'start'});
-          document.querySelector('.nav-links').classList.remove('open');
-        }
-      });
-    });
-  </script>
+  </section>
 
 </body>
 </html>
