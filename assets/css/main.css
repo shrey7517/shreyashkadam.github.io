@@ -1,0 +1,166 @@
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&family=JetBrains+Mono&display=swap');
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+  --bg-dark: #1E1E1E;
+  --bg-beige: #F5F1EA;
+
+  --text-dark: #2B2B2B;
+  --text-light: #EAEAEA;
+
+  --gold: #C9A24D;
+  --gold-dark: #9E7C19;
+  --bronze: #B08D57;
+}
+
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-beige);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  width: 100%;
+  background-color: var(--bg-beige);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--gold);
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== GITHUB BUTTON ===== */
+.github-btn {
+  border: 1.5px solid var(--gold);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.github-btn:hover {
+  background-color: var(--gold);
+  color: var(--bg-beige);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.hero p {
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+/* ===== BUTTONS ===== */
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--gold);
+  color: var(--bg-beige);
+  padding: 0.7rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--gold-dark);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--text-dark);
+  color: var(--text-dark);
+  padding: 0.7rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.hero-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
