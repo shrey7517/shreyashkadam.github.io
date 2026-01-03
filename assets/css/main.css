@@ -268,3 +268,37 @@ body {
     justify-content: flex-start;
   }
 }
+
+<link rel="stylesheet" href="assets/css/main.css">
+/* ================= BUTTON STYLES ================= */
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: var(--gold);
+  color: white;
+}
+
+.btn.primary:hover {
+  background: var(--gold-dark);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+}
+
+.btn.secondary:hover {
+  background: var(--gold);
+  color: white;
+}
+
