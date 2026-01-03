@@ -7,134 +7,118 @@
   <title>Projects | SK</title>
 
   <meta name="description"
-    content="Engineering projects by SK across hardware systems, embedded software, and simulation-based design." />
+    content="Engineering projects across hardware systems, embedded intelligence, and simulation-based design." />
 
-  <!-- Main CSS -->
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body>
 
-  <!-- ================= NAVBAR ================= -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo">SK</div>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">SK</div>
 
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="why-hire-me.html">Why Hire Me</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <a class="github-btn" href="https://github.com/shrey7517" target="_blank">GitHub</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="why-hire-me.html">Why Hire Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </nav>
 
-  <!-- ================= PROJECTS ================= -->
-  <section class="section">
+    <a class="github-btn" href="https://github.com/shrey7517" target="_blank">GitHub</a>
+  </div>
+</nav>
 
-    <div class="section-header">
-      <h1>Selected <span>Projects</span></h1>
+<!-- ================= PROJECTS ================= -->
+<section class="projects-section">
+
+  <header class="projects-header">
+    <h1>Selected <span>Projects</span></h1>
+    <p>
+      A curated set of engineering projects demonstrating hands-on experience
+      across hardware systems, embedded intelligence, and simulation-based design.
+    </p>
+  </header>
+
+  <!-- ================= HARDWARE ================= -->
+  <h2 class="projects-category">🛠 Hardware Systems</h2>
+
+  <!-- Project 1 -->
+  <div class="project-card">
+    <div class="project-info">
+      <h3>Motion Detection System in Darkness</h3>
       <p>
-        A curated set of engineering projects demonstrating hands-on experience
-        across hardware systems, embedded intelligence, and simulation-based design.
+        Designed and implemented an Arduino-based motion detection system capable
+        of reliable operation in low-light environments. The system integrates
+        PIR and IR sensors with real-time alert mechanisms, focusing on power
+        efficiency and robustness.
       </p>
+      <div class="tech-stack">Arduino · PIR Sensor · IR Sensor · Embedded C</div>
     </div>
 
-    <!-- ================= HARDWARE PROJECTS ================= -->
-    <h2 class="section-subtitle">🛠 Hardware Systems</h2>
+    <div class="project-media">
+      <img src="assets/images/project1.jpg" alt="Motion Detection System">
+    </div>
+  </div>
 
-    <div class="project-row">
-      <div class="project-text">
-        <h3>Motion Detection System in Darkness</h3>
-        <p>
-          Designed and implemented an Arduino-based motion detection system capable
-          of reliable operation in low-light environments. The system integrates
-          sensors and alert mechanisms with emphasis on real-time response, power
-          efficiency, and robustness.
-        </p>
-        <span class="tech">Arduino · Sensors · Embedded C</span>
-      </div>
-
-      <div class="project-image">
-        <img src="assets/images/project1.jpg" alt="Motion Detection System">
-      </div>
+  <!-- Project 2 -->
+  <div class="project-card">
+    <div class="project-info">
+      <h3>Clap-Controlled Light & Fan System</h3>
+      <p>
+        Developed an automated appliance control system using acoustic input.
+        The system detects clap patterns and controls electrical loads using
+        signal conditioning and relay-based switching.
+      </p>
+      <div class="tech-stack">Arduino · Sound Sensor · Relay Module</div>
     </div>
 
-    <div class="project-row">
-      <div class="project-text">
-        <h3>Clap-Controlled Light & Fan System</h3>
-        <p>
-          Developed an automated appliance control system using acoustic input.
-          Signal conditioning and relay-based switching were implemented to ensure
-          safe, noise-resilient, and stable operation in real-world environments.
-        </p>
-        <span class="tech">Arduino · Relay Module · Signal Processing</span>
-      </div>
+    <div class="project-media">
+      <img src="assets/images/project2.jpg" alt="Clap Controlled System">
+    </div>
+  </div>
 
-      <div class="project-image">
-        <img src="assets/images/project2.jpg" alt="Clap Controlled System">
-      </div>
+  <!-- ================= EMBEDDED ================= -->
+  <h2 class="projects-category">🧠 Embedded Intelligence</h2>
+
+  <div class="project-card">
+    <div class="project-info">
+      <h3>Embedded Audio Classification (TinyML)</h3>
+      <p>
+        Implemented an embedded audio classification pipeline on an STM32
+        microcontroller using TinyML. Focused on optimized inference,
+        low latency, and deployment on constrained hardware.
+      </p>
+      <div class="tech-stack">STM32 · TensorFlow Lite · Embedded ML</div>
     </div>
 
-    <!-- ================= EMBEDDED / ML ================= -->
-    <h2 class="section-subtitle">🧠 Embedded Intelligence</h2>
+    <div class="project-media">
+      <img src="assets/images/drone_project.jpg" alt="TinyML Audio Classification">
+    </div>
+  </div>
 
-    <div class="project-row">
-      <div class="project-text">
-        <h3>Embedded Audio Classification (TinyML)</h3>
-        <p>
-          Implemented an embedded audio classification pipeline on an STM32
-          microcontroller using TinyML techniques. Focused on optimized inference,
-          low memory footprint, and deployment on constrained hardware.
-        </p>
-        <span class="tech">STM32 · TensorFlow Lite · Embedded ML</span>
-      </div>
+  <!-- ================= SIMULATION ================= -->
+  <h2 class="projects-category">📡 Simulation & Control</h2>
 
-      <div class="project-image">
-        <img src="assets/images/drone_project.jpg" alt="TinyML Audio Classification">
-      </div>
+  <div class="project-card">
+    <div class="project-info">
+      <h3>Satellite Communication System Simulation</h3>
+      <p>
+        Simulated satellite communication links using MATLAB to analyze
+        signal propagation, atmospheric disturbances, and system performance.
+      </p>
+      <div class="tech-stack">MATLAB · Simulink · Communication Systems</div>
     </div>
 
-    <!-- ================= SIMULATION ================= -->
-    <h2 class="section-subtitle">📡 Simulation & Control</h2>
-
-    <div class="project-row">
-      <div class="project-text">
-        <h3>Satellite Communication System Simulation</h3>
-        <p>
-          Simulated satellite communication links using MATLAB to analyze signal
-          behavior, atmospheric disturbances, and system-level performance.
-          Emphasized modeling accuracy and interpretation of results.
-        </p>
-        <span class="tech">MATLAB · Simulink · Communication Systems</span>
-      </div>
-
-      <div class="project-image">
-        <img src="assets/images/project3.jpg" alt="Satellite Communication Simulation">
-      </div>
+    <div class="project-media">
+      <img src="assets/images/project3.jpg" alt="Satellite Simulation">
     </div>
+  </div>
 
-    <div class="project-row">
-      <div class="project-text">
-        <h3>Dual-Mode Propulsion Quadcopter Simulation</h3>
-        <p>
-          Designed and simulated a quadcopter platform to study stability,
-          trajectory control, and propulsion behavior under different operating
-          modes using classical control techniques.
-        </p>
-        <span class="tech">MATLAB · Control Systems · Simulation</span>
-      </div>
-
-      <div class="project-image">
-        <img src="assets/images/project1.jpg" alt="Quadcopter Simulation">
-      </div>
-    </div>
-
-  </section>
+</section>
 
 </body>
 </html>
