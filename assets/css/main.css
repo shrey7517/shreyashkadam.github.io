@@ -33,6 +33,11 @@ body {
 }
 
 /* ================= NAVBAR ================= */
+.logo {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
 .navbar {
   position: sticky;
   top: 0;
