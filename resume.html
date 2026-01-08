@@ -97,6 +97,28 @@
     }
   });
 </script>
+
+  <script>
+  const reveals = document.querySelectorAll(
+    ".reveal, .reveal-left, .reveal-right"
+  );
+
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    const revealPoint = 120;
+
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < windowHeight - revealPoint) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  window.addEventListener("load", revealOnScroll);
+</script>
+
 </body>
 </html>
 
