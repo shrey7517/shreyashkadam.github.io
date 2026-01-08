@@ -541,3 +541,69 @@ body {
   transform: translateX(0);
 }
 
+/* ================= GLOBAL SECTION ANIMATIONS ================= */
+
+.section-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.section-animate.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Direction variants */
+.animate-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.9s ease;
+}
+
+.animate-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.9s ease;
+}
+
+.animate-left.active,
+.animate-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger children */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stagger.active > * {
+  animation: staggerFade 0.8s ease forwards;
+}
+
+.stagger.active > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger.active > *:nth-child(2) { animation-delay: 0.25s; }
+.stagger.active > *:nth-child(3) { animation-delay: 0.4s; }
+.stagger.active > *:nth-child(4) { animation-delay: 0.55s; }
+.stagger.active > *:nth-child(5) { animation-delay: 0.7s; }
+
+@keyframes staggerFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+  .section-animate,
+  .animate-left,
+  .animate-right {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
