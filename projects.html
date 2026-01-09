@@ -6,7 +6,7 @@
 
   <title>Projects | Shreyash Kadam</title>
 
-  <meta name="description" content="Engineering projects by Shreyash Kadam across hardware systems, software development, and simulation-based design.">
+  <meta name="description" content="Engineering projects by Shreyash Kadam across hardware systems and simulation-based design.">
 
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -16,7 +16,7 @@
   <!-- ================= NAVBAR ================= -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">Shreyash Kadam</div>
+      <div class="logo">SK</div>
 
       <div class="nav-links">
         <a href="index.html">Home</a>
@@ -31,121 +31,115 @@
     </div>
   </nav>
 
-  <!-- ================= PROJECTS SECTION ================= -->
-  <section class="hero" style="padding-top:4rem;">
-
-    <div class="hero-text">
-      <h1 class="fade-up">My Projects</h1>
+  <!-- ================= PROJECTS HEADER ================= -->
+  <section class="hero section-animate" style="padding-top:4rem;">
+    <div class="hero-text stagger">
+      <h1>My <span>Projects</span></h1>
       <p>
-        Below are selected projects that reflect my work across hardware design,
-        embedded systems, software development, and simulation-based engineering.
-        Each project emphasizes practical problem-solving and system-level thinking.
+        A curated selection of projects demonstrating my work in embedded systems,
+        hardware prototyping, and simulation-based engineering.
       </p>
+    </div>
+  </section>
 
-      <h2 style="margin-top:2.5rem;">🛠 Hardware Projects</h2>
+  <!-- ================= PROJECTS LIST ================= -->
+  <section class="projects-section">
 
-      <p>
-        <strong>Motion Detection System in Darkness</strong><br>
-        Designed an Arduino-based motion detection system capable of operating in
-        low-light environments using sensors and alert mechanisms.
-        <br><em>Technologies:</em> Arduino, Sensors, Embedded C
-      </p>
+    <!-- Project 1 -->
+    <div class="project-card animate-left">
+      <div class="project-info">
+        <h3>Motion Detection System in Darkness</h3>
+        <p>
+          An Arduino-based motion detection system designed to operate in low-light
+          conditions using sensors and alert mechanisms. Focused on reliability,
+          power efficiency, and real-time response.
+        </p>
+        <div class="tech-stack">
+          Arduino · Sensors · Embedded C
+        </div>
+      </div>
 
-      <p>
-        <strong>Clap-Controlled Light and Fan System</strong><br>
-        Developed an automated system to control electrical appliances using sound
-        input with safe relay-based switching.
-        <br><em>Technologies:</em> Arduino, Relay Module, Signal Processing
-      </p>
+      <div class="project-media">
+        <img src="assets/images/project1.jpg" alt="Motion Detection System">
+      </div>
+    </div>
 
-      <h2 style="margin-top:2.5rem;">📡 Simulation Projects</h2>
+    <!-- Project 2 -->
+    <div class="project-card animate-right">
+      <div class="project-info">
+        <h3>Clap-Controlled Light & Fan System</h3>
+        <p>
+          An automated appliance control system using sound input. Implemented
+          signal conditioning and relay-based switching for safe and stable operation.
+        </p>
+        <div class="tech-stack">
+          Arduino · Relay Module · Signal Processing
+        </div>
+      </div>
 
-      <p>
-        <strong>Satellite Communication System Simulation</strong><br>
-        MATLAB-based simulation analyzing signal behavior and disturbances.
-        <br><em>Technologies:</em> MATLAB, Simulink
-      </p>
+      <div class="project-media">
+        <img src="assets/images/project2.jpg" alt="Clap Controlled System">
+      </div>
+    </div>
 
-      <p>
-        <strong>Dual-Mode Propulsion Quadcopter Simulation</strong><br>
-        Simulated quadcopter stability, control response, and propulsion behavior.
-        <br><em>Technologies:</em> MATLAB, Control Systems
-      </p>
+    <!-- Project 3 -->
+    <div class="project-card animate-left">
+      <div class="project-info">
+        <h3>Satellite Communication System Simulation</h3>
+        <p>
+          MATLAB-based simulation analyzing satellite communication behavior,
+          signal disturbances, and overall system performance.
+        </p>
+        <div class="tech-stack">
+          MATLAB · Simulink · Communication Systems
+        </div>
+      </div>
 
+      <div class="project-media">
+        <img src="assets/images/project3.jpg" alt="Satellite Simulation">
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card animate-right">
+      <div class="project-info">
+        <h3>Dual-Mode Propulsion Quadcopter Simulation</h3>
+        <p>
+          A simulation-focused project studying quadcopter stability, propulsion
+          behavior, and control response using control-system principles.
+        </p>
+        <div class="tech-stack">
+          MATLAB · Control Systems · Simulation
+        </div>
+      </div>
+
+      <div class="project-media">
+        <img src="assets/images/drone_project.jpg" alt="Drone Project">
+      </div>
     </div>
 
   </section>
 
-  <!-- ================= PROJECT IMAGES ================= -->
-  <section style="max-width:1200px; margin:5rem auto; padding:0 2rem;">
+  <!-- ================= SCROLL ANIMATION SCRIPT ================= -->
+  <script>
+    const animatedSections = document.querySelectorAll(
+      ".section-animate, .animate-left, .animate-right, .stagger"
+    );
 
-    <h2 style="margin-bottom:2.5rem;">Project Visuals</h2>
+    function animateOnScroll() {
+      const triggerPoint = window.innerHeight * 0.85;
 
-    <div style="
-      display:grid;
-      grid-template-columns:repeat(2, 1fr);
-      gap:3rem;
-      text-align:center;
-    ">
+      animatedSections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < triggerPoint) {
+          section.classList.add("active");
+        }
+      });
+    }
 
-      <!-- Image 1 -->
-      <div>
-        <img src="assets/images/project1.jpg" alt="Motion Detection System"
-          style="width:100%; max-width:320px; border-radius:14px; box-shadow:0 15px 30px rgba(0,0,0,0.15);">
-        <p style="margin-top:0.8rem; font-weight:600;">
-          Motion Detection System in Darkness
-        </p>
-      </div>
-
-      <!-- Image 2 -->
-      <div>
-        <img src="assets/images/project2.jpg" alt="Clap Controlled System"
-          style="width:100%; max-width:320px; border-radius:14px; box-shadow:0 15px 30px rgba(0,0,0,0.15);">
-        <p style="margin-top:0.8rem; font-weight:600;">
-          Clap-Controlled Light & Fan System
-        </p>
-      </div>
-
-      <!-- Image 3 -->
-      <div>
-        <img src="assets/images/project3.jpg" alt="Satellite Communication Simulation"
-          style="width:100%; max-width:320px; border-radius:14px; box-shadow:0 15px 30px rgba(0,0,0,0.15);">
-        <p style="margin-top:0.8rem; font-weight:600;">
-          Satellite Communication Simulation
-        </p>
-      </div>
-
-      <!-- Drone Project -->
-      <div>
-        <img src="assets/images/drone_project.jpg" alt="Drone Project"
-          style="width:100%; max-width:320px; border-radius:14px; box-shadow:0 15px 30px rgba(0,0,0,0.15);">
-        <p style="margin-top:0.8rem; font-weight:600;">
-          Dual-Mode Propulsion Drone Project
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-<script>
-  const animatedSections = document.querySelectorAll(
-    ".section-animate, .animate-left, .animate-right, .stagger"
-  );
-
-  function animateOnScroll() {
-    const triggerPoint = window.innerHeight * 0.85;
-
-    animatedSections.forEach(section => {
-      const top = section.getBoundingClientRect().top;
-      if (top < triggerPoint) {
-        section.classList.add("active");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", animateOnScroll);
-  window.addEventListener("load", animateOnScroll);
-</script>
+    window.addEventListener("scroll", animateOnScroll);
+    window.addEventListener("load", animateOnScroll);
+  </script>
 
 </body>
 </html>
