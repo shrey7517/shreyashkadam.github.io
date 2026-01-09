@@ -242,3 +242,42 @@ body {
     opacity: 1 !important;
   }
 }
+/* ================= BACKWARD COMPAT BUTTON FIX ================= */
+
+/* Fix old btn-primary */
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: white;
+  padding: 0.85rem 1.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(201,162,77,0.45);
+}
+
+/* Fix btn-outline */
+.btn-outline {
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 0.8rem 1.7rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--gold);
+  color: white;
+}
+
