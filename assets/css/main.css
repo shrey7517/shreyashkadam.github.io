@@ -280,4 +280,10 @@ body {
   background: var(--gold);
   color: white;
 }
+a.btn,
+a.btn-primary,
+a.btn-outline {
+  text-decoration: none;
+  color: inherit;
+}
 
