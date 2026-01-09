@@ -6,7 +6,7 @@
 
   <title>Resume | Shreyash Kadam</title>
 
-  <meta name="description" content="Download or view the resume of SK – Electronics & Telecommunication Engineer.">
+  <meta name="description" content="Download or preview the resume of Shreyash Kadam – Electronics & Telecommunication Engineer.">
 
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -16,14 +16,14 @@
   <!-- ================= NAVBAR ================= -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo"> SK </div>
+      <div class="logo">SK</div>
 
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="why-hire-me.html">Why Hire Me</a>
-        <a href="resume.html">Resume</a>
+        <a href="resume.html" class="active">Resume</a>
         <a href="contact.html">Contact</a>
       </div>
 
@@ -32,93 +32,76 @@
   </nav>
 
   <!-- ================= RESUME SECTION ================= -->
- <div class="btn-group">
-  <a href="resume/Shreyash_Kadam_Resume.pdf"
-     class="btn primary"
-     download>
-    ⬇ Download Resume
-  </a>
+  <section class="hero section-animate" style="padding-top:4rem; text-align:center;">
 
-  <button class="btn secondary" onclick="openResumeModal()">
-    👁 Preview Resume
-  </button>
-</div>
- <section class="hero" style="padding-top:4rem; text-align:center;">
-
-    <div class="hero-text">
+    <div class="hero-text stagger">
       <h1>My <span>Resume</span></h1>
+      <p>
+        View or download my resume highlighting my academic background,
+        technical skills, and engineering projects.
+      </p>
 
-      <p>You can view or download my resume below:</p>
+      <!-- Buttons -->
+      <div class="btn-group" style="justify-content:center; margin-top:2rem;">
+        <a href="resume/Shreyash_Kadam_Resume.pdf"
+           class="btn primary"
+           download>
+          ⬇ Download Resume
+        </a>
 
-      <!-- Download Button -->
-    <a href="resume/Shreyash_Kadam_Resume.pdf"
-   class="btn primary"
-   download>
-  Download Resume
-</a>
-
-
-
-      <!-- Embedded PDF Viewer -->
-      <div style="margin-top:2rem;">
-        <embed src="assets/resume/Shreyash_Kadam_Resume.pdf" type="application/pdf" width="90%" height="600px">
+        <button class="btn secondary" onclick="openResumeModal()">
+          👁 Preview Resume
+        </button>
       </div>
-
     </div>
 
   </section>
-<!-- ================= RESUME MODAL ================= -->
-<div id="resumeModal" class="resume-modal">
-  <div class="resume-modal-content">
-    <span class="close-btn" onclick="closeResumeModal()">×</span>
 
-    <iframe
-      src="resume/Shreyash_Kadam_Resume.pdf"
-      frameborder="0">
-    </iframe>
+  <!-- ================= RESUME MODAL ================= -->
+  <div id="resumeModal" class="resume-modal">
+    <div class="resume-modal-content animate-scale">
+      <span class="close-btn" onclick="closeResumeModal()">×</span>
+
+      <iframe
+        src="resume/Shreyash_Kadam_Resume.pdf"
+        frameborder="0">
+      </iframe>
+    </div>
   </div>
-</div>
 
-<script>
-  function openResumeModal() {
-    document.getElementById("resumeModal").classList.add("active");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeResumeModal() {
-    document.getElementById("resumeModal").classList.remove("active");
-    document.body.style.overflow = "auto";
-  }
-
-  // Close on background click
-  document.getElementById("resumeModal").addEventListener("click", function(e) {
-    if (e.target === this) {
-      closeResumeModal();
-    }
-  });
-</script>
-
+  <!-- ================= SCRIPTS ================= -->
   <script>
-  const reveals = document.querySelectorAll(
-    ".reveal, .reveal-left, .reveal-right"
-  );
+    function openResumeModal() {
+      document.getElementById("resumeModal").classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
 
-  function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 120;
+    function closeResumeModal() {
+      document.getElementById("resumeModal").classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
 
-    reveals.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < windowHeight - revealPoint) {
-        el.classList.add("active");
-      }
+    document.getElementById("resumeModal").addEventListener("click", function(e) {
+      if (e.target === this) closeResumeModal();
     });
-  }
 
-  window.addEventListener("scroll", revealOnScroll);
-  window.addEventListener("load", revealOnScroll);
-</script>
+    /* Scroll animations */
+    const animatedSections = document.querySelectorAll(
+      ".section-animate, .animate-left, .animate-right, .stagger"
+    );
+
+    function animateOnScroll() {
+      const triggerPoint = window.innerHeight * 0.85;
+      animatedSections.forEach(section => {
+        if (section.getBoundingClientRect().top < triggerPoint) {
+          section.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", animateOnScroll);
+    window.addEventListener("load", animateOnScroll);
+  </script>
 
 </body>
 </html>
-
