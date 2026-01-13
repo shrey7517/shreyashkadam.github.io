@@ -71,6 +71,15 @@
 
   <!-- ================= SCRIPTS ================= -->
   <script>
+  function openResume() {
+    if (window.innerWidth < 768) {
+      window.open("resume/Shreyash_Kadam_Resume.pdf", "_blank");
+    } else {
+      document.querySelector(".resume-modal").classList.add("active");
+    }
+  }
+</script>
+<script>
     function openResumeModal() {
       document.getElementById("resumeModal").classList.add("active");
       document.body.style.overflow = "hidden";
